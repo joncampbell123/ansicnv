@@ -1,0 +1,32 @@
+Hackipedia.org TODO list:
+
+- Core code
+  - ANSI escape sequence parsing
+  - state machine
+  - bit rate counter (for code to pace itself at a commom modem baud rate i.e. 9600)
+  - structure to represent terminal "screen"
+    - characters are 32-bit each (for unicode representation of source i.e. CP437 to UTF-8, or UTF-8 ANSIs)
+    - attributes
+      - color (background, foreground)
+      - bright/dim
+      - blink
+      - double width/height
+      - 88-color palette
+      - 256-color palette
+      - 24-bit truecolor
+    - cursor position, visibility, color, form (line, block?)
+- Requirements
+  - Standard C I/O
+  - GNU libiconv
+  - libpng
+  - libgif
+- General testing
+  - SDL app to "play" an ANSI animation
+- ANSI graphics (non-moving ANSI)
+  - convert to PNG
+  - convert to HTML
+- ANSI animations (moving ANSI)
+  - convert to GIF
+- Web browser display (for moving ANSI)
+  - HTML5 ANSI player (JavaScript + Canvas implementation)
+

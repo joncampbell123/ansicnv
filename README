@@ -1,0 +1,11 @@
+ANSI graphics/animation utility code.
+
+Code to work with graphics and ANSI animations in DEC VT100
+encoding, a terminal standard that was widely popular up
+until the late 90s.
+
+MS-DOS had an implementation (ANSI.SYS) too.
+
+The first intent is to develop tools that my site (hackipedia.org)
+can use to display ANSI graphics and animations in multiple formats
+compatible with the browser.
