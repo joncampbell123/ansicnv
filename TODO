@@ -14,6 +14,7 @@ Hackipedia.org TODO list:
       - 88-color palette
       - 256-color palette
       - 24-bit truecolor
+    - scrollback buffer
     - cursor position, visibility, color, form (line, block?)
 - Requirements
   - Standard C I/O
