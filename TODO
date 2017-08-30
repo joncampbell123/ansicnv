@@ -30,6 +30,4 @@ Hackipedia.org TODO list:
   - convert to GIF
 - Web browser display (for moving ANSI)
   - HTML5 ANSI player (JavaScript + Canvas implementation)
-    - I want to write the canvas rendering and timing code in JS, obviously.
-    - Can we compile the core with Emscripten, and have the JS call it?
 
