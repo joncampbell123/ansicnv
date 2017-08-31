@@ -19,6 +19,8 @@ Hackipedia.org TODO list:
 - Requirements
   - Standard C I/O
   - GNU libiconv (compile-time table generation)
+  - fontconfig
+  - freetype
   - libpng
   - libgif
 - General testing
