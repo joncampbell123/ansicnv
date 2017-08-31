@@ -1,17 +1,8 @@
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <sys/stat.h>
-#include <stdarg.h>
-#include <assert.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
+#include <assert.h>
+#include <stdarg.h>
 #include <stdio.h>
-#include <fcntl.h>
-#include <errno.h>
-
-#include <string>
 
 #include "ansicodeparser.h"
 
