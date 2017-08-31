@@ -128,3 +128,10 @@ void ANSICodeParser::debug(const char *fmt,...) {
     va_end(va);
 }
 
+unsigned char ANSICodeParser::final_code(void) const {
+    if (code_length >= 2)
+        return code[code_length-1];
+
+    return 0;
+}
+

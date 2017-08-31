@@ -22,5 +22,6 @@ public:
     void reset(void);
     void take_input(const unsigned char b);
     void debug(const char *fmt,...);
+    unsigned char final_code(void) const;
 };
 
