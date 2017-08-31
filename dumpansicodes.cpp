@@ -13,6 +13,8 @@
 
 #include <string>
 
+#include "ansibaudrateconverter.h"
+
 double wallclocktime(void) {
     struct timeval tv;
 
@@ -20,31 +22,6 @@ double wallclocktime(void) {
 
     return (double)tv.tv_sec + ((double)tv.tv_usec / 1000000);
 }
-
-class ANSIBaudRateCounter {
-public:
-    ANSIBaudRateCounter() : bitcount(0), baud(9600) { set_frame_format(8/*bits/byte*/,1/*parity*/,1/*stop bit*/); }
-public:
-    unsigned long               bitcount;
-    unsigned long               baud;
-    unsigned int                bits_per_byte;
-public:
-    void set_frame_format(const unsigned char new_bits_per_byte,const unsigned char parity_bits,const unsigned char stop_bits) {
-        bits_per_byte = 1/*frame start*/ + new_bits_per_byte + parity_bits + stop_bits;
-    }
-    void reset_counter(void) {
-        bitcount = 0;
-    }
-    double current_data_time(void) const { /* in seconds */
-        return (double)bitcount / baud;
-    }
-    void count_byte(void) {
-        bitcount += bits_per_byte;
-    }
-    void count_bytes(const unsigned long count) {
-        bitcount += bits_per_byte * count;
-    }
-};
 
 // either a character code, control code, or an escape sequence
 class ANSICodeParser {
