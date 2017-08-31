@@ -13,15 +13,8 @@
 
 #include <string>
 
+#include "wallclocktime.h"
 #include "ansibaudrateconverter.h"
-
-double wallclocktime(void) {
-    struct timeval tv;
-
-    gettimeofday(&tv,NULL);
-
-    return (double)tv.tv_sec + ((double)tv.tv_usec / 1000000);
-}
 
 // either a character code, control code, or an escape sequence
 class ANSICodeParser {
