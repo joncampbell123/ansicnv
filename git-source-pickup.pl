@@ -10,6 +10,7 @@ $branchfname = "-branch-$branch" if $branch ne "";
 print "Current branch: $branch\n";
 
 print "Ensuring the build tree is clean...\n";
+$x = system("find -name \*\~");
 $x = system("./git-update-all-wo-push");
 die unless $x == 0;
 
